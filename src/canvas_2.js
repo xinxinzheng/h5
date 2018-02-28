@@ -70,7 +70,8 @@ function drawShotHands(canvas,context){
 }
 
 function drawClock(canvas,context){
-    context.clearRect(0,0,canvas.width,canvas.height)
+    context.clearRect(0,0,canvas.width,canvas.height);
+    drawBackground(canvas,context);
     drawCirle(canvas,context);
     drawShotHands(canvas,context);
     drawInnerCircle(canvas,context);
