@@ -1,0 +1,46 @@
+<!DOCTYPE>
+<html>
+<head>
+    <title>Canvas</title>
+    <style>
+        #canvas{
+            border:1px solid gray;
+        }
+        .layout{
+            position: absolute;
+            padding:10px;
+            top:50px;
+            left:50px;
+            height:130px;
+            width:230px;
+            background:rgba(0,0,0,.2);
+            border:1px solid rgba(0,0,0,.8);
+        }
+        .title{
+            color:yellow;
+        }
+        .sub-title{
+            color:darkblue;
+        }
+        .start{
+            color:rgba(255,255,255,.8);
+            font-size:20px;
+            cursor:pointer;
+        }
+        .start:focus , .start:hover{
+            color:yellow;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas" width="1000" height="500" style="margin:auto">
+
+    </canvas>
+    <div class="layout">
+        <h2 class="title">Bouncing Balls</h2>
+        <p class="sub-title">One hundred balls bouncing</p>
+        <a class="start" id="start">Start</a>
+    </div>
+    <script src="src/canvas_4.js"></script>
+</body>
+</html>
