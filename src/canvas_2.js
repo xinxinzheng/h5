@@ -81,6 +81,8 @@ function drawClock(canvas,context){
 // drawBackground(canvas,context);
 
 context.font = fontHeight + 'px Arial';
+var img = document.getElementById('image');
 setInterval(function(){
     drawClock(canvas,context);
-},1000)
+    img.src = canvas.toDataURL();
+},500)
