@@ -1,0 +1,43 @@
+<!DOCTYPE>
+<html>
+<head>
+    <title>Canvas</title>
+    <style>
+        .content{
+            width:100%;
+            display:flex;
+        }
+        .left{
+            flex:1;
+        }
+        .right{
+            flex:8;
+            position: relative;
+        }
+        .top{
+            position: absolute;
+            top:10px;
+            left:20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="left">
+            
+        </div>
+        <div class="right">
+            <canvas id="canvas" width="1000" height="800" style="margin:auto">
+                
+            </canvas>
+            <div class="top">
+                <select id="color" change="changeColor">
+                    <option value="red">red</option>
+                    <option value="green">green</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <script src="src/canvas_15.js"></script>
+</body>
+</html>
