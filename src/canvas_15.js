@@ -5,6 +5,7 @@ var height = context.canvas.height;
 var mousedown = false;
 var x = 0;
 var y = 0;
+var image ;
 var color = document.getElementById('color');
 context.lineWidth = 1;
 context.strokeStyle = "lightblue";
@@ -24,8 +25,15 @@ function drawGrid(step){
 function changeColor(){
     context.strokeStyle = color.value;
 }
+
+function saveImage(){
+    image = context.getImageData(0,0,width,height);
+}
+function restoreImage(){
+    context.putImageData(image,0,0);
+}
 canvas.onmousedown = function(evt){
-    context.save();
+    saveImage();
     context.strokeStyle = color.value;
     mousedown = true;
     x = evt.offsetX;
@@ -33,6 +41,7 @@ canvas.onmousedown = function(evt){
 }
 canvas.onmousemove = function(evt){
     if(mousedown === true){
+        restoreImage();
         context.beginPath();
         context.moveTo(x,y);
         context.lineTo(evt.offsetX,evt.offsetY);
